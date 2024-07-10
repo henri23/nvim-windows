@@ -37,3 +37,16 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+local o = vim.o
+local wo = vim.wo
+local opt = vim.opt
+if jit.os == "Windows" then
+  o.shell = "powershell"
+  o.shellcmdflag =
+    "-nologo"
+  o.shellredir = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
+  o.shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
+  o.shellquote = ""
+  o.shellxquote = ""
+end
