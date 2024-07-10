@@ -6,6 +6,10 @@ require "nvchad.options"
 -- o.cursorlineopt ='both' -- to enable cursorline!
 -- local o = vim.o
 -- o.shell = "powershell.exe"
+local set = vim.opt -- set options
+set.tabstop = 4
+set.softtabstop = 4
+set.shiftwidth = 4
 
 -- vim.api.nvim_create_autocmd("FileType", {
 -- 	pattern = "c",
