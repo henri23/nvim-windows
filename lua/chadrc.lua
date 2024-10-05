@@ -7,33 +7,41 @@ vim.api.nvim_set_hl(0, "Comment", { fg = "#d1d1d1" })
 
 vim.api.nvim_set_hl(0, "@comment", { link = "Comment" })
 M.ui = {
-  theme = "catppuccin",
-  theme_toggle = { "catppuccin", "catppuccin" },
-  transparency = true,
+    theme = "falcon",
+    theme_toggle = { "falcon", "catppuccin" },
+    transparency = true,
 
-  nvdash = {
-    load_on_startup = true,
-
-    header = {
-      "                                                     ",
-      "  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
-      "  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
-      "  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
-      "  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
-      "  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
-      "  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
-      "                                                     ",
+    changed_themes = {
+        aquarium = {
+            ["@comment"] = { italic = true, fg = "#d1d1d1" },
+        },
+        catppuccin = {
+            ["@comment"] = { fg = "#d1d1d1" },
+        },
     },
+    nvdash = {
+        load_on_startup = true,
 
-    buttons = {
-      { "  Find File", "Spc f f", "Telescope find_files" },
-      { "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
-      { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
-      { "  Bookmarks", "Spc m a", "Telescope marks" },
-      { "  Themes", "Spc t h", "Telescope themes" },
-      { "  Mappings", "Spc c h", "NvCheatsheet" },
+        header = {
+            "                                                     ",
+            "  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
+            "  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
+            "  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
+            "  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
+            "  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
+            "  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
+            "                                                     ",
+        },
+
+        buttons = {
+            { "  Find File", "Spc f f", "Telescope find_files" },
+            { "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
+            { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
+            { "  Bookmarks", "Spc m a", "Telescope marks" },
+            { "  Themes", "Spc t h", "Telescope themes" },
+            { "  Mappings", "Spc c h", "NvCheatsheet" },
+        },
     },
-  },
 }
 
 return M

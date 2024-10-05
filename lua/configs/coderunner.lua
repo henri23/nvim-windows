@@ -10,6 +10,8 @@ require("code_runner").setup {
     go = "cd $dir && go run .",
     -- cpp="gcc $fileName -lstdc++ -o $fileNameWithoutExt && $fileNameWithoutExt"
     c = "./build-all.bat",
+    h = "./build-all.bat",
+    inl = "./build-all.bat",
     scss = "sass $dir/$fileName $dir/$fileNameWithoutExt.css",
     cs = function(...)
       local root_dir = require("lspconfig").util.root_pattern "*.csproj"(vim.loop.cwd())

@@ -10,6 +10,7 @@ local set = vim.opt -- set options
 set.tabstop = 4
 set.softtabstop = 4
 set.shiftwidth = 4
+set.number = false
 
 -- vim.api.nvim_create_autocmd("FileType", {
 -- 	pattern = "c",
