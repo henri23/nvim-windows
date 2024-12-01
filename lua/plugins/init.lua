@@ -27,6 +27,7 @@ return {
 
             local keymap = vim.keymap -- for conciseness
             keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Telescope Find todos" })
+            keymap.set("n", "<leader>fs", ":Telescope lsp_dynamic_workspace_symbols<cr>", { desc = "Telescope Find Symbols"})
         end,
     },
     {

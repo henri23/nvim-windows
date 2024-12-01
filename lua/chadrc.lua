@@ -7,8 +7,8 @@ vim.api.nvim_set_hl(0, "Comment", { fg = "#d1d1d1" })
 
 vim.api.nvim_set_hl(0, "@comment", { link = "Comment" })
 M.ui = {
-    theme = "falcon",
-    theme_toggle = { "falcon", "catppuccin" },
+    theme = "catppuccin",
+    theme_toggle = { "catppuccin", "catppuccin" },
     transparency = true,
 
     changed_themes = {

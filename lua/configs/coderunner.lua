@@ -8,7 +8,7 @@ require("code_runner").setup {
     dart = "dart $fileName",
     rust = "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt",
     go = "cd $dir && go run .",
-    -- cpp="gcc $fileName -lstdc++ -o $fileNameWithoutExt && $fileNameWithoutExt"
+    cpp="./build-all.bat",
     c = "./build-all.bat",
     h = "./build-all.bat",
     inl = "./build-all.bat",
