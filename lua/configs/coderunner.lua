@@ -8,10 +8,10 @@ require("code_runner").setup {
     dart = "dart $fileName",
     rust = "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt",
     go = "cd $dir && go run .",
-    cpp="./build-all.bat",
-    c = "./build-all.bat",
-    h = "./build-all.bat",
-    inl = "./build-all.bat",
+    cpp="start build-ninja.bat",
+    c = "start build-ninja.bat",
+    h = "start build-ninja.bat",
+    inl = "start build-ninja.bat",
     scss = "sass $dir/$fileName $dir/$fileNameWithoutExt.css",
     cs = function(...)
       local root_dir = require("lspconfig").util.root_pattern "*.csproj"(vim.loop.cwd())
